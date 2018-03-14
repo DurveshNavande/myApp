@@ -1,0 +1,6 @@
+framework module Pods_LendingRecord {
+  umbrella header "Pods-LendingRecord-umbrella.h"
+
+  export *
+  module * { export * }
+}
