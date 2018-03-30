@@ -15,6 +15,7 @@
 		7D59E5BC20570DB700EB5153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D59E5BA20570DB700EB5153 /* LaunchScreen.storyboard */; };
 		7D59E5C420570E2400EB5153 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E5C320570E2400EB5153 /* AddVC.swift */; };
 		7D59E5C620570EF700EB5153 /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E5C520570EF700EB5153 /* cell.swift */; };
+		7DE0E86B206EB8DD008F4A92 /* Trans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE0E86A206EB8DD008F4A92 /* Trans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7D59E5BD20570DB700EB5153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D59E5C320570E2400EB5153 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		7D59E5C520570EF700EB5153 /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
+		7DE0E86A206EB8DD008F4A92 /* Trans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trans.swift; sourceTree = "<group>"; };
 		7FE0B8587B8410C85595935B /* Pods-LendingRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendingRecord.release.xcconfig"; path = "Pods/Target Support Files/Pods-LendingRecord/Pods-LendingRecord.release.xcconfig"; sourceTree = "<group>"; };
 		AC3C87F0B61A06A385FAEF56 /* Pods-LendingRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendingRecord.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LendingRecord/Pods-LendingRecord.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				7D59E5B120570DB700EB5153 /* AppDelegate.swift */,
 				7D59E5B320570DB700EB5153 /* ViewController.swift */,
 				7D59E5C320570E2400EB5153 /* AddVC.swift */,
+				7DE0E86A206EB8DD008F4A92 /* Trans.swift */,
 				7D59E5B520570DB700EB5153 /* Main.storyboard */,
 				7D59E5C520570EF700EB5153 /* cell.swift */,
 				7D59E5B820570DB700EB5153 /* Assets.xcassets */,
@@ -227,6 +230,7 @@
 			files = (
 				7D59E5C420570E2400EB5153 /* AddVC.swift in Sources */,
 				7D59E5C620570EF700EB5153 /* cell.swift in Sources */,
+				7DE0E86B206EB8DD008F4A92 /* Trans.swift in Sources */,
 				7D59E5B420570DB700EB5153 /* ViewController.swift in Sources */,
 				7D59E5B220570DB700EB5153 /* AppDelegate.swift in Sources */,
 			);

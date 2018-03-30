@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TFb-Qm-tCh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TFb-Qm-tCh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,7 +88,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Sur-s3-4Fi"/>
+                    <navigationItem key="navigationItem" id="Sur-s3-4Fi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3IV-uy-aW7">
+                            <connections>
+                                <segue destination="gWv-83-lkn" kind="popoverPresentation" popoverAnchorBarButtonItem="3IV-uy-aW7" id="WGH-9e-HCX">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,9 +165,12 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORe-Be-cO8">
-                                <rect key="frame" x="164" y="583" width="46" height="30"/>
+                                <rect key="frame" x="170" y="583" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveTapped:" destination="gWv-83-lkn" eventType="touchUpInside" id="6wr-eG-GvR"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AuU-JK-APN">
                                 <rect key="frame" x="35" y="329" width="97" height="30"/>
@@ -172,6 +183,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yOu-6E-Wz6"/>
                     </view>
+                    <connections>
+                        <outlet property="giveNote" destination="AuU-JK-APN" id="MyQ-Rr-jl1"/>
+                        <outlet property="givePrice" destination="uNK-iQ-d0I" id="Hqg-Lp-cTt"/>
+                        <outlet property="myImage" destination="lXa-mr-ea2" id="fHd-w4-rw2"/>
+                        <outlet property="takeNote" destination="orE-DB-8uU" id="6cM-kO-mL9"/>
+                        <outlet property="takePrice" destination="lAH-Kk-JQf" id="dei-hz-iYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwM-e8-Hwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
