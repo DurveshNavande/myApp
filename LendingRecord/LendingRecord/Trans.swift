@@ -12,6 +12,8 @@ import RealmSwift
 class Trans: Object {
     
     @objc dynamic var price = ""
+    @objc dynamic var note = ""
+
     
 }
 

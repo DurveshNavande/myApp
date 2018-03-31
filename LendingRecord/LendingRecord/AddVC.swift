@@ -10,6 +10,7 @@ import UIKit
 
 class AddVC: UIViewController {
     
+    var existingTrans: Trans?
     
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var givePrice: UITextField!
@@ -28,11 +29,53 @@ class AddVC: UIViewController {
         
         var newTrans = Trans()
         
-        if let price = takePrice.text{
-            newTrans.price = price
+        if existingTrans == nil{
+            
+            if let tPrice = takePrice.text{
+                newTrans.price = tPrice
+            }
+            
+            else if let gPrice = givePrice.text{
+                newTrans.price = gPrice
+            }
+            
+            print(newTrans.price)
+            
+            if let tNote = takeNote.text{
+                newTrans.note = tNote
+            }
+            
+            else if let gNote = giveNote.text{
+                newTrans.note = gNote
+            }
+            print(newTrans.note)
+           
+            
         }
-        print(newTrans.price)
+        
+      
         
     }
     
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
