@@ -70,10 +70,10 @@
 				7D59E5B120570DB700EB5153 /* AppDelegate.swift */,
 				7D59E5B320570DB700EB5153 /* ViewController.swift */,
 				7D59E5C320570E2400EB5153 /* AddVC.swift */,
-				7DE0E86A206EB8DD008F4A92 /* Trans.swift */,
 				7D59E5B520570DB700EB5153 /* Main.storyboard */,
 				7D59E5C520570EF700EB5153 /* cell.swift */,
 				7D59E5B820570DB700EB5153 /* Assets.xcassets */,
+				7DE0E86A206EB8DD008F4A92 /* Trans.swift */,
 				7D59E5BA20570DB700EB5153 /* LaunchScreen.storyboard */,
 				7D59E5BD20570DB700EB5153 /* Info.plist */,
 			);

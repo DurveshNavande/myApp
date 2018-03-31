@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddVC: UIViewController {
+class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var existingTrans: Trans?
     
@@ -18,11 +18,17 @@ class AddVC: UIViewController {
     @IBOutlet weak var giveNote: UITextField!
     @IBOutlet weak var takeNote: UITextField!
     
+       var imagePicker: UIImagePickerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imagePicker = UIImagePickerController()
+   
     }
+    
+    
+    
 
     
     @IBAction func saveTapped(_ sender: Any) {
@@ -50,14 +56,31 @@ class AddVC: UIViewController {
             }
             print(newTrans.note)
            
-            
+            if let image = myImage.image {
+                if let nsData = UIImageJPEGRepresentation(image, 0.1) as NSData?{
+                    newTrans.imageNSData = nsData
+                }
+            }
         }
         
       
         
     }
     
+    @IBAction func imageTapped(_ sender: Any) {
+        
+        present(imagePicker,animated: true, completion: nil)
+        
+    }
     
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let ima = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            myImage.image = ima
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
     
     
     

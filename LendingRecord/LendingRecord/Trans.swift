@@ -14,6 +14,7 @@ class Trans: Object {
     @objc dynamic var price = ""
     @objc dynamic var note = ""
 
+     @objc var imageNSData: NSData?
     
 }
 
