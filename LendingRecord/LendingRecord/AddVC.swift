@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -17,19 +18,17 @@ class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
     @IBOutlet weak var takePrice: UITextField!
     @IBOutlet weak var giveNote: UITextField!
     @IBOutlet weak var takeNote: UITextField!
+
     
-       var imagePicker: UIImagePickerController!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imagePicker = UIImagePickerController()
+    
    
     }
     
     
-    
-
     
     @IBAction func saveTapped(_ sender: Any) {
         
@@ -63,24 +62,38 @@ class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
             }
         }
         
-      
-        
-    }
-    
-    @IBAction func imageTapped(_ sender: Any) {
-        
-        present(imagePicker,animated: true, completion: nil)
-        
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let ima = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            myImage.image = ima
+    
+    @IBAction func importImage(_ sender: Any) {
+        
+        let image = UIImagePickerController()
+        image.delegate = self
+        
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        image.allowsEditing = false
+        
+        self.present(image, animated: true){
+            
+                // after completing
         }
         
-        picker.dismiss(animated: true, completion: nil)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            myImage.image = image
+        }
+        
+        else{
+            //error message
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     
     
