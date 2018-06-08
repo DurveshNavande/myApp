@@ -18,13 +18,14 @@ class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
     @IBOutlet weak var takePrice: UITextField!
     @IBOutlet weak var giveNote: UITextField!
     @IBOutlet weak var takeNote: UITextField!
-
+    @IBOutlet weak var nameText: UITextField!
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
+        
+        
    
     }
     
@@ -34,7 +35,7 @@ class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
         
         var newTrans = Trans()
         
-        if existingTrans == nil{
+     
             
             if let tPrice = takePrice.text{
                 newTrans.price = tPrice
@@ -60,8 +61,25 @@ class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
                     newTrans.imageNSData = nsData
                 }
             }
-        }
+            if let name = nameText.text{
+                newTrans.name = name
+            }
+            
+        let realm = try? Realm()
+            try? realm?.write {
+                realm?.add(newTrans)
+                
+                
+                let alertController = UIAlertController(title: "iOScreator", message:
+                    "Saved", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+                
+                self.present(alertController, animated: true, completion: nil)
+
+                
+            }
         
+         
     }
     
     
